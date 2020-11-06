@@ -13,7 +13,8 @@
 
 	<div class="nav-item dropdown">
 		<a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-toggle="dropdown">
-			{% include ui/avatar.html person-id=person-id %}
+			{% include ui/avatar.html person-id=person-id size="sm" %}
+
 			{% unless include.hide-username %}
 			<div class="d-none d-xl-block pl-2">
 				<div>{{ person.full_name }}</div>
@@ -21,6 +22,6 @@
 			</div>
 			{% endunless %}
 		</a>
-		{% include ui/dropdown-menu.html right=true icons=true separated=true %}
+		{% include ui/dropdown-menu.html arrow=true right=true separated=true menu="Set status,Profile & account,Feedback,|,Settings,Logout" %}
 	</div>
 </div>

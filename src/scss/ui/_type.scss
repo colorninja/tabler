@@ -8,6 +8,14 @@ a {
   text-decoration-skip-ink: auto;
 }
 
+ul,
+ol {
+  margin: 0 0 1rem 0;
+  margin-inline-start: 1rem;
+  padding: 0;
+  padding-inline-start: 1rem;
+}
+
 h1,
 h2,
 h3,
@@ -90,6 +98,7 @@ code {
   background: rgba($code-color, .03);
   border: 1px solid rgba($code-color, .064);
   border-radius: $border-radius;
+  font-weight: $font-weight-normal;
 }
 
 

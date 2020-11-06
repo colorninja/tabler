@@ -1,5 +1,7 @@
 //Vendor
-// import 'bootstrap';
+
+import './autosize';
+import './input-mask';
 
 (function() {
 	/**

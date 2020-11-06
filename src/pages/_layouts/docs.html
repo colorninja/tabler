@@ -13,14 +13,13 @@ page-header: Documentation
 		{% assign toc = content | toc_only %}
 
 
-		<div class="sticky-top">
-			{% include ui/button.html href=site.github_url text="Browse source code" icon="brand/github" color="white" external=true block=true class="mb-6" %}
+		<div class="sticky-top lh-lg py-4">
+			{% include ui/button.html href=site.github-url text="Browse source code" icon="brand/github" color="white" external=true block=true class="mb-6" %}
 
 			{% if toc != '' %}
 				<h5 class="subheader">On this page</h5>
 				{{ toc }}
 			{% endif %}
-
 		</div>
 
 
@@ -48,7 +47,7 @@ page-header: Documentation
 
 				<div class="markdown">
 					<div class="d-flex">
-						<h2 class="h1 mt-0 mb-3">{{ page.title }}</h2>
+						<h1 class="h2 mt-0 mb-3">{{ page.title }}</h1>
 
 						{% if page.bootstrap-link %}
 						<p class="ml-auto">

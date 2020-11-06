@@ -8,10 +8,7 @@ textarea {
 Form label
  */
 .form-label {
-  font-size: $h4-font-size;
-  font-weight: $font-weight-bold;
   display: block;
-  margin-bottom: .5rem;
 
   &.required {
     &:after {
@@ -141,7 +138,7 @@ Form help
   cursor: pointer;
   user-select: none;
   background: $min-white;
-  border-radius: 50%;
+  border-radius: $border-radius-full;
   transition: .3s background-color, .3s color;
 
   &:hover,
@@ -158,13 +155,13 @@ Form switch
   user-select: none;
 
   &.form-check-highlight .form-check-input:not(:checked) ~ .form-check-label {
-    opacity: .64;
+    opacity: $text-muted-opacity;
   }
 }
 
 .form-check-input {
   background-size: $form-check-input-width;
-  margin-top: .25rem;
+  margin-top: .125rem;
 
   .form-switch & {
     transition: .3s background-color, .3s background-position;
@@ -172,14 +169,12 @@ Form switch
 }
 
 .form-check-label {
-  line-height: $line-height-sm;
-  padding: .125rem 0;
 }
 
 .form-check-description {
   color: $text-muted;
   font-size: $h5-font-size;
-  line-height: $line-height-sm;
+  margin-top: .25rem;
 }
 
 /**

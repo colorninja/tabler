@@ -125,10 +125,15 @@ gulp.task('unused-files', (cb) => {
 /**
  * Clean `dist` folder before build
  */
-gulp.task('clean', () => {
+gulp.task('clean-dirs', () => {
 	return gulp
 		.src(`{${distDir}/*,${demoDir}/*}`, { read: false })
 		.pipe(clean());
+});
+
+gulp.task('clean-jekyll', (cb) => {
+	return cp.spawn('bundle', ['exec', 'jekyll', 'clean'], { stdio: 'inherit' })
+		.on('close', cb);
 });
 
 /**
@@ -139,6 +144,7 @@ gulp.task('sass', () => {
 		.src(`${srcDir}/scss/*.scss`)
 		.pipe(sass({
 			style: 'expanded',
+			precision: 7,
 			importer: (url, prev, done) => {
 				if (url[0] === '~') {
 					url = path.resolve('node_modules', url.substr(1));
@@ -218,7 +224,7 @@ gulp.task('js', () => {
  */
 gulp.task('watch-jekyll', (cb) => {
 	browserSync.notify('Building Jekyll');
-	return cp.spawn('bundle', ['exec', 'jekyll', 'build', '--watch', '--destination', demoDir], { stdio: 'inherit' })
+	return cp.spawn('bundle', ['exec', 'jekyll', 'build', '--watch', '--destination', demoDir, '--trace'], { stdio: 'inherit' })
 		.on('close', cb);
 });
 
@@ -229,7 +235,7 @@ gulp.task('build-jekyll', (cb) => {
 	var env = Object.create(process.env);
 	env.JEKYLL_ENV = 'production';
 
-	return cp.spawn('bundle', ['exec', 'jekyll', 'build', '--destination', demoDir], { env: env, stdio: 'inherit' })
+	return cp.spawn('bundle', ['exec', 'jekyll', 'build', '--destination', demoDir, '--trace'], { env: env, stdio: 'inherit' })
 		.on('close', cb);
 });
 
@@ -331,6 +337,8 @@ gulp.task('add-banner', () => {
 		.pipe(header(getBanner()))
 		.pipe(gulp.dest(`${distDir}`))
 });
+
+gulp.task('clean', gulp.series('clean-dirs', 'clean-jekyll'));
 
 gulp.task('start', gulp.series('clean', 'sass', 'js', 'build-jekyll', gulp.parallel('watch-jekyll', 'watch', 'browser-sync')));
 

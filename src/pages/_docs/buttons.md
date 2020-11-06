@@ -2,8 +2,7 @@
 title: Buttons
 description: Use button styles that best suit your designs and encourage users to take the desired actions. You can customize the button's properties to improve the user experience of your website or system, changing the size, shape, color and many more.
 bootstrap-link: components/buttons/
-done: true
-libs: tabler-buttons
+menu: docs.buttons
 ---
 
 
@@ -12,14 +11,23 @@ libs: tabler-buttons
 As one of the most common elements of UI design, buttons have a very important function of engaging users with your website or app and guiding them in their actions. Use the `.btn` classes with the `<button>` element and add additional styling that will make your buttons serve their purpose and draw users' attention. 
 
 {% capture code %}
-<a href="#" class="btn btn-primary" role="button">Link</a>
-<button class="btn btn-primary">Button</button>
-<input type="button" class="btn btn-primary" value="Input"/>
-<input type="submit" class="btn btn-primary" value="Submit"/>
-<input type="reset" class="btn btn-primary" value="Reset"/>
+<a href="#" class="btn" role="button">Link</a>
+<button class="btn">Button</button>
+<input type="button" class="btn" value="Input"/>
+<input type="submit" class="btn" value="Submit"/>
+<input type="reset" class="btn" value="Reset"/>
 {% endcapture  %}
 {% include example.html code=code wrapper="btn-list" centered=true %}
 
+
+## Default button 
+
+The standard button creates a white background and subtle hover animation. It's meant to look and behave as an interactive element of your page. 
+
+{% capture code %}
+<a href="#" class="btn" role="button">Link</a>
+{% endcapture  %}
+{% include example.html code=code wrapper="btn-list" centered=true %}
 
 ## Button variations
 
@@ -121,21 +129,23 @@ Add `.btn-lg` or `.btn-sm` to change the size of your button and differentiate t
 
 {% capture code %}
 <button type="button" class="btn btn-primary btn-lg">Large button</button>
-<button type="button" class="btn btn-white btn-lg">Large button</button>
+<button type="button" class="btn btn-lg">Large button</button>
 {% endcapture %}
 {% include example.html code=code wrapper="btn-list" centered=true %}
 
 {% capture code %}
 <button type="button" class="btn btn-primary btn-sm">Small button</button>
-<button type="button" class="btn btn-white btn-sm">Small button</button>
+<button type="button" class="btn btn-sm">Small button</button>
 {% endcapture %}
 {% include example.html code=code wrapper="btn-list" centered=true %}
 
 You can also add the `.btn-block` class to create block level buttons which span the full width of a parent.
 
 {% capture code %}
-<button type="button" class="btn btn-primary btn-block">Block level button</button>
-<button type="button" class="btn btn-white btn-block">Block level button</button>
+<div>
+  <button type="button" class="btn btn-primary btn-block">Block level button</button>
+  <button type="button" class="btn btn-block">Block level button</button>
+</div>
 {% endcapture %}
 {% include example.html code=code wrapper="btn-list" centered=true %}
 
@@ -147,7 +157,7 @@ Label your button with text and add an icon to communiacate the action and make 
 Icons can be found [**here**](/docs/icons.html#icons)
 
 {% capture code %}
-<button type="button" class="btn btn-dark">
+<button type="button" class="btn">
 {% include ui/icon.html icon="upload" %}
 Upload
 </button>
@@ -159,7 +169,7 @@ I like
 {% include ui/icon.html icon="check" %}
 I agree
 </button>
-<button type="button" class="btn btn-outline-primary">
+<button type="button" class="btn btn-primary">
 {% include ui/icon.html icon="plus" %}
 More
 </button>
@@ -223,21 +233,21 @@ Create a dropdown button that will encourage users to click for more options. Yo
 
 {% capture code %}
 <div class="dropdown">
-  <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown">
+  <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
      {% include ui/icon.html icon="calendar" %}
   </button>
   {% include ui/dropdown-menu.html %}
 </div>
 
 <div class="dropdown">
-  <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown">
+  <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
      {% include ui/icon.html icon="calendar" %}Show calendar
   </button>
   {% include ui/dropdown-menu.html %}
 </div>
 
 <div class="dropdown">
-  <button type="button" class="btn btn-white dropdown-toggle" data-toggle="dropdown">
+  <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
      Show calendar
   </button>
   {% include ui/dropdown-menu.html %}
@@ -272,7 +282,7 @@ Create a list of buttons using the `.btn-list` container to display different ac
 {% capture code %}
 <div class="btn-list">
   <a href="#" class="btn btn-success">Save changes</a>
-  <a href="#" class="btn btn-white">Save and continue</a>
+  <a href="#" class="btn">Save and continue</a>
   <a href="#" class="btn btn-danger">Cancel</a>
 </div>
 {% endcapture %}
@@ -282,25 +292,25 @@ If the list is long, it will be wrapped and some buttons will be moved to the ne
 
 {% capture code %}
 <div class="btn-list">
-  <a href="#" class="btn btn-white">One</a>
-  <a href="#" class="btn btn-white">Two</a>
-  <a href="#" class="btn btn-white">Three</a>
-  <a href="#" class="btn btn-white">Four</a>
-  <a href="#" class="btn btn-white">Five</a>
-  <a href="#" class="btn btn-white">Six</a>
-  <a href="#" class="btn btn-white">Seven</a>
-  <a href="#" class="btn btn-white">Eight</a>
-  <a href="#" class="btn btn-white">Nine</a>
-  <a href="#" class="btn btn-white">Ten</a>
-  <a href="#" class="btn btn-white">Eleven</a>
-  <a href="#" class="btn btn-white">Twelve</a>
-  <a href="#" class="btn btn-white">Thirteen</a>
-  <a href="#" class="btn btn-white">Fourteen</a>
-  <a href="#" class="btn btn-white">Fifteen</a>
-  <a href="#" class="btn btn-white">Sixteen</a>
-  <a href="#" class="btn btn-white">Seventeen</a>
-  <a href="#" class="btn btn-white">Eighteen</a>
-  <a href="#" class="btn btn-white">Nineteen</a>
+  <a href="#" class="btn">One</a>
+  <a href="#" class="btn">Two</a>
+  <a href="#" class="btn">Three</a>
+  <a href="#" class="btn">Four</a>
+  <a href="#" class="btn">Five</a>
+  <a href="#" class="btn">Six</a>
+  <a href="#" class="btn">Seven</a>
+  <a href="#" class="btn">Eight</a>
+  <a href="#" class="btn">Nine</a>
+  <a href="#" class="btn">Ten</a>
+  <a href="#" class="btn">Eleven</a>
+  <a href="#" class="btn">Twelve</a>
+  <a href="#" class="btn">Thirteen</a>
+  <a href="#" class="btn">Fourteen</a>
+  <a href="#" class="btn">Fifteen</a>
+  <a href="#" class="btn">Sixteen</a>
+  <a href="#" class="btn">Seventeen</a>
+  <a href="#" class="btn">Eighteen</a>
+  <a href="#" class="btn">Nineteen</a>
 </div>
 {% endcapture %}
 {% include example.html code=code %}
@@ -309,7 +319,7 @@ Use the `.text-center` or the `.text-right` modifiers to change the buttons' ali
 
 {% capture code %}
 <div class="btn-list justify-content-center">
-  <a href="#" class="btn btn-white">Save and continue</a>
+  <a href="#" class="btn">Save and continue</a>
   <a href="#" class="btn btn-primary">Save changes</a>
 </div>
 {% endcapture %}
@@ -317,7 +327,7 @@ Use the `.text-center` or the `.text-right` modifiers to change the buttons' ali
 
 {% capture code %}
 <div class="btn-list justify-content-end">
-  <a href="#" class="btn btn-white">Save and continue</a>
+  <a href="#" class="btn">Save and continue</a>
   <a href="#" class="btn btn-primary">Save changes</a>
 </div>
 {% endcapture %}
@@ -326,7 +336,7 @@ Use the `.text-center` or the `.text-right` modifiers to change the buttons' ali
 {% capture code %}
 <div class="btn-list">
   <a href="#" class="btn btn-outline-danger mr-auto">Delete</a>
-  <a href="#" class="btn btn-white">Save and continue</a>
+  <a href="#" class="btn">Save and continue</a>
   <a href="#" class="btn btn-primary">Save changes</a>
 </div>
 {% endcapture %}
@@ -338,13 +348,13 @@ Use the `.text-center` or the `.text-right` modifiers to change the buttons' ali
 Use buttons with avatars to simplify the process of interaction and make your design more personalized. Buttons can contain avatars and labels or only avatars, if displayed on a smaller space. 
 
 {% capture code %}
-<a href="#" class="btn btn-white">
+<a href="#" class="btn">
   {% include ui/avatar.html person-id="4" %} Avatar
 </a>
-<a href="#" class="btn btn-white">
+<a href="#" class="btn">
   {% include ui/avatar.html person-id="5" %} Avatar
 </a>
-<a href="#" class="btn btn-white">
+<a href="#" class="btn">
   {% include ui/avatar.html person-id="6" %} Avatar
 </a>
 {% endcapture %}

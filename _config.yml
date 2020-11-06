@@ -11,8 +11,9 @@ keep_files:
 title: Tabler
 description: Premium and Open Source dashboard template with responsive and high quality UI.
 homepage: https://tabler.io
-github_url: https://github.com/tabler/tabler
-sponsor_url: https://github.com/sponsors/codecalm
+github-url: https://github.com/tabler/tabler
+changelog-url: https://github.com/tabler/tabler/releases
+sponsor-url: https://github.com/sponsors/codecalm
 
 mapbox_key: pk.eyJ1IjoiY29kZWNhbG0iLCJhIjoiSzRiOVJvQSJ9.BUVkTT6IYs83xSUs4H7bjQ
 
@@ -30,7 +31,6 @@ plugins:
 tabler-plugins:
   - tabler-flags
   - tabler-payments
-  - tabler-buttons
 
 exclude:
   - .jekyll-cache
@@ -108,9 +108,6 @@ colors:
   cyan:
     hex: '#17a2b8'
     title: Cyan
-  gray:
-    hex: '#868e96'
-    title: Gray
 
 colors-extra:
   white:
@@ -119,6 +116,9 @@ colors-extra:
   dark:
     hex: '#303645'
     title: Dark
+  gray:
+    hex: '#868e96'
+    title: Gray
 
 variants:
   - name: success
@@ -155,9 +155,6 @@ button-variants:
   dark:
     class: dark
     title: Dark
-  link:
-    class: link
-    title: Link
 
 button-states:
   - class:
@@ -169,46 +166,46 @@ button-states:
 
 socials:
   facebook:
-    icon: brand/facebook
+    icon: brand-facebook
     title: Facebook
   twitter:
-    icon: brand/twitter
+    icon: brand-twitter
     title: Twitter
   google:
-    icon: brand/google
+    icon: brand-google
     title: Google
   youtube:
-    icon: brand/youtube
+    icon: brand-youtube
     title: Youtube
   vimeo:
-    icon: brand/vimeo
+    icon: brand-vimeo
     title: Vimeo
   dribbble:
-    icon: brand/dribbble
+    icon: brand-dribbble
     title: Dribbble
   github:
-    icon: brand/github
+    icon: brand-github
     title: Github
   instagram:
-    icon: brand/instagram
+    icon: brand-instagram
     title: Instagram
   pinterest:
-    icon: brand/pinterest
+    icon: brand-pinterest
     title: Pinterest
   vk:
-    icon: brand/vk
+    icon: brand-vk
     title: VK
   rss:
-    icon: brand/rss
+    icon: rss
     title: RSS
   flickr:
-    icon: brand/flickr
+    icon: brand-flickr
     title: Flickr
   bitbucket:
-    icon: brand/bitbucket
+    icon: brand-bitbucket
     title: Bitbucker
   tabler:
-    icon: brand/tabler
+    icon: brand-tabler
     title: Tabler
 
 months-short: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']

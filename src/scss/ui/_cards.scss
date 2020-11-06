@@ -1,10 +1,5 @@
 .card {
-  margin-bottom: $cards-grid-gap;
   box-shadow: $card-shadow;
-
-  @include media-breakpoint-down($cards-grid-breakpoint) {
-    margin-bottom: $cards-grid-gap-sm;
-  }
 
   @media print {
     border: none;
@@ -22,8 +17,14 @@
   }
 }
 
-.card-group {
-  margin-bottom: $card-group-margin;
+.card-img,
+.card-img-left {
+  @include border-left-radius($card-inner-border-radius);
+}
+
+.card-img,
+.card-img-right {
+  @include border-right-radius($card-inner-border-radius);
 }
 
 .card-inactive {
@@ -164,7 +165,7 @@
   display: block;
   margin: 0 0 1rem;
   font-size: $h3-font-size;
-  font-weight: $headings-font-weight;
+  font-weight: $font-weight-medium;
   color: $headings-color;
   line-height: 1.5rem;
 
@@ -397,7 +398,6 @@ Card list group
 Card tabs
  */
 .card-tabs {
-  margin-bottom: $card-group-margin;
 
   .nav-tabs {
     position: relative;
